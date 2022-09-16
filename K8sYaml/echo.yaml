@@ -22,7 +22,7 @@ spec:
     rollingUpdate:
       maxSurge: 2       
       maxUnavailable: 1
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
@@ -33,6 +33,6 @@ spec:
       - name: echo
         image: hashicorp/http-echo
         args:
-        - "-text=Blue v3"
+        - "-text=Blue v2"
         ports:
         - containerPort: 5678
